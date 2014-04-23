@@ -1,4 +1,4 @@
-sticky ListView Header base on [PullToRefresh library](http://developer.android.com/tools/help/lint.html).
+## Sticky ListView Header base on [PullToRefresh library](https://github.com/chrisbanes/Android-PullToRefresh).
 ===================
 
 ## The effect
@@ -11,5 +11,5 @@ Requirements:
 * SdkVersion >= 11
 
 
-## other
+## Other
 author email：liucanwen517@gmail.com
