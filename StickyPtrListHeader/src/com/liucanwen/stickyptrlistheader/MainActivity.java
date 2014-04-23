@@ -4,11 +4,15 @@ import java.util.Random;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -78,6 +82,21 @@ public class MainActivity extends Activity
 				new GetDataTask().execute();
 			}
 		});
+		
+		listView.setOnItemClickListener(new OnItemClickListener()
+		{
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3)
+			{
+				Intent intent = new Intent(Intent.ACTION_VIEW);   
+		        Uri uri = Uri.parse("https://github.com/kk-java/StickyPtrListHeader");   
+		        intent.setData(uri);   
+		        Intent chooseIntent = Intent.createChooser(intent, "view source");   
+		        startActivity(chooseIntent);   
+			}
+		});
+		
 	}
 
 	private class ListViewAdapter extends BaseAdapter
@@ -104,7 +123,7 @@ public class MainActivity extends Activity
 		@Override
 		public String getItem(int position)
 		{
-			return "item" + position;
+			return "view source item>" + position;
 		}
 
 		@Override
