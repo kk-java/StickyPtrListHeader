@@ -1,7 +1,7 @@
 ## Sticky ListView Header base on [PullToRefresh library](https://github.com/chrisbanes/Android-PullToRefresh).
 ===================
 
-## The effect
+## The effect (gif)
 ![Screenshot](https://github.com/kk-java/StickyPtrListHeader/raw/master/intro.gif)
 
 
